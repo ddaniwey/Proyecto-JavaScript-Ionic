@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>NETFLOX</h1>
+    </header>
     <div id="div-principal">
         <div id="form-seleccion">
-            <button id="boton-drama" onclick="mostrarDrama()">Drama</button>
-            <button id="boton-comedia" onclick="mostrarComedia()">Comedia</button>
-            <button id="boton-terror" onclick="mostrarTerror()">Terror</button>
+            <button id="boton-drama">Drama</button>
+            <button id="boton-comedia">Comedia</button>
+            <button id="boton-terror">Terror</button>
+            <button id="boton-todas">Todas</button>
+            <select id="selectGenero">
+                <option value="todas" default>Todas</option>
+                <option value="drama">Drama</option>
+                <option value="comedia">Comedia</option>
+                <option value="terror">Terror</option>
+            </select>
         </div>
         <div id="lista_peliculas">
             <div class="pelicula terror">
