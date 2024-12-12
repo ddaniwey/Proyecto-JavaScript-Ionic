@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio  id="audio" src="./audio/grito.mp3" controls></audio>
+
+    <div>
+    <button id="botonTerror">Terror</button>
+    <button id="botonAccion">Acción</button>
+    <button id="x">X</button>
+    <label for="buscarTitulo">Buscar: </label>
+    <input type="text" id="buscarTitulo">
+    </div>
+    <div id="contenedorMain">
+        <div class="serie terror" titulo="from">
+        <h3>From</h3>
+        <p>Terror</p>
+        <img src="https://es.web.img3.acsta.net/pictures/22/02/04/12/42/2264086.jpg" alt="From">
+        </div>
+    <div class="serie accion" titulo="vikingos">
+        <h3>Vikingos</h3>
+        <p>Accion</p>
+        <img src="https://www.ecartelera.com/carteles-series/100/127/006_p.jpg" alt="Vikingos">
+    </div>
+    <div class="serie accion" titulo="juego de tronos">
+        <h3>Juego de tronos</h3>
+        <p>Accion</p>
+        <img src="https://es.web.img3.acsta.net/pictures/19/03/22/10/08/5883111.jpg?coixp=50&coiyp=40" alt="Juego de tronos">
+    </div>
+    <div class="serie terror" titulo="the last of us">
+        <h3>The last of Us</h3>
+        <p>Terror</p>
+        <img src="https://pics.filmaffinity.com/The_Last_of_Us_Serie_de_TV-722385305-large.jpg" alt="The last of Us">
+    </div>
+    <div class="serie terror" titulo="the walking dead">
+        <h3>The walking dead</h3>
+        <p>Terror</p>
+        <img src="https://m.media-amazon.com/images/I/81Nzfpz9EpL._AC_UF894,1000_QL80_.jpg" alt="The walking dead">
+    </div>
+    </div>
+
+    <script>
+        function seleccionarGenero (selectorGenero, bgColor){
+            let series = document.querySelectorAll(selectorGenero);
+            series.forEach(serie => {
+                serie.style.backgroundColor = bgColor;
+            });
+        }
+
+        document.querySelector('#botonTerror').addEventListener(('click'),() =>{
+            seleccionarGenero('.serie', 'rgb(255, 235, 205)');
+            seleccionarGenero('.terror', 'rgba(255, 187, 0, 0.678)');
+
+            let audio = document.querySelector('#audio');
+            audio.play();
+        })
+        document.querySelector('#botonAccion').addEventListener(('click'),() =>{
+            seleccionarGenero('.serie', 'rgb(255, 235, 205)');
+            seleccionarGenero('.accion', 'rgba(255, 187, 0, 0.678)');
+        })
+        // Buscador
+        // Va cogiendo todas las letras
+        let inputTitulo = document.querySelector('#buscarTitulo');
+        inputTitulo.addEventListener(("input"), () =>{
+            let buscarTitulo = inputTitulo.value.toLowerCase();
+            console.log('Buscando...' + buscarTitulo);
+            seleccionarGenero('.serie', 'rgb(255, 235, 205)');
+            if(buscarTitulo.length > 0){
+            let series = document.querySelectorAll(`[titulo*=${buscarTitulo}]`); // * Significa que esté en cualquier posición
+            seleccionarGenero(`[titulo*=${buscarTitulo}]`, 'rgba(255, 187, 0, 0.678)');
+             }
+            });
+        document.querySelector('#x').addEventListener('mouseover', () => {
+            seleccionarGenero('.serie','rgb(255, 235, 205' );
+            seleccionarGenero('.terror', 'black');
+        })
+        document.querySelector('#x').addEventListener('mouseout', () => {
+            seleccionarGenero('.serie','rgb(255, 235, 205' );
+        })
+    </script>
+</body>
+</html>

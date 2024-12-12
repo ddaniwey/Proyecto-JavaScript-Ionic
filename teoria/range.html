@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangos</title>
+</head>
+<body>
+    <form onsubmit="return false;">
+        <label for="precio">Precio</label>
+        <input type="range" max="100" min="1" id="precio" value="1">
+        <span id="imprimir"></span>
+        <br>
+        <img src="imagenes/gozilla.jpeg" width="10px" alt ="Un pequeño Gozilla" id="imagenGozilla">
+    </form>
+    <script>
+        document.querySelector('#precio').addEventListener('input', () =>{
+            let precio = document.querySelector('#precio').value;
+            let imprimir = document.getElementById('imprimir')
+            imprimir.innerHTML = precio;
+        //Agrandar una imagen
+        document.querySelector('#imagenGozilla').setAttribute("width", precio+"px");
+    }); // Fin addEventListener
+
+        
+    </script>
+</body>
+</html>

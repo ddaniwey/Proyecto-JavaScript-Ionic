@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    
+
+    <script>
+        function sumar(a, b){
+            let resultado = a + b;
+            return resultado;
+        }
+
+        let a = 10;
+        let b = 5;
+        const RESULTADO = sumar(a, b);
+        console.log(RESULTADO);
+
+        let x = "adela";
+        let parseo = parseInt(x);
+        console.log(parseo);
+        console.log(typeof parseo);
+
+        // *******************
+        // Re-declaración de variables;
+        a = 20;
+        b = 10;
+        sumar(a, b);
+        console.log(sumar(a,b));
+        // El resultado arriba es de 15 y ahora aquí abajo es 30
+
+        
+        </script>
+</body>
+</html>

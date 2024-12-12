@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console - Time</title>
+</head>
+<body>
+    
+
+    <script>
+        function calcular(){
+            console.time("calcular");
+            for(let i = 0; i < 1000001; i++){
+                console.log("calculando...");
+            } // Cuando acaba sale del bucle y printea esto. Por lo tanto no hace falta un if (i === 1000000)
+            console.log("fin");
+            console.timeEnd("calcular");
+        }
+        calcular();
+        // Sin ifentificador
+        console.time();
+        console.timeEnd();
+        // Con identificador
+        console.time("Proceso A");
+        console.timeEnd("Proceso A");
+
+    </script>
+</body>
+</html>

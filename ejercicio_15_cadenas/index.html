@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversión</title>
+</head>
+<body>
+    <label for="texto">Texto:</label>
+    <input type="text" id="texto">
+    <button type="button" id="conversion">Pulsa</button>
+    <p id="imprimir"></p>
+    <script>
+        function convertir (){
+            let texto = document.querySelector('#texto').value;
+            console.log("*"+texto+"*");
+            texto = texto.trim().toUpperCase(); // Podemos encadenar métodos
+            // Si son del mismo tipo (para Strings los 2)
+            console.log("*"+texto+"*");
+        }
+        document.querySelector('#conversion').addEventListener("click", convertir);
+    </script>
+</body>
+</html>
