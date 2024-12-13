@@ -46,6 +46,30 @@ let playasEspanna = playas.filter(playa => {
 }).forEach(playa => {
     console.log(playa.nombre);
 });
+
+console.log('');
+
+let playasEspanna2 = 
+playas.filter(playa => playa.pais.toLowerCase() === 'españa');
+playas.forEach(playa => console.log(playa.nombre));
+
 //3. Obtención del código HTML que representa una playa
 
-//<div class='playa'><div>Playa:Famara</div><div>País:España</div></div>
+const divs = playas.map ( playa => {
+    return `<div class="playa">${playa.nombre}<div></div><div>País:${playa.pais}</div></div>`
+}).forEach (div => {
+
+})
+
+console.log('');
+
+playas  
+    .map(playa => `<div class="playa">${playa.nombre}<div></div><div>País:${playa.pais}</div></div>` )
+    .forEach(div => console.log(div));
+
+console.log('');
+
+playas 
+    .filter(playa => playa.dificultad.toLowerCase() === 'experto')
+    .map(playa =>  `<div class="playa">${playa.nombre}<div></div><div>País:${playa.pais}</div></div>`)
+    .forEach (div => console.log(div));
