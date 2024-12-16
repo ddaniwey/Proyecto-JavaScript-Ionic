@@ -8,7 +8,7 @@ function processData(pelicula){
     console.log(pelicula.Search[0].Director);
     console.log(pelicula.Search[0].Year);
     
-} // Fin function
+} 
 
 function doRequest(url){
   fetch(url)
@@ -27,10 +27,5 @@ function doRequest(url){
 }
  //console.log(COMMON_URL + 's=Star Wars&'); // Comprobamos la url
 doRequest(COMMON_URL + 's=Star Wars&');
-
-
-// EJERCICIO 1 
-// doRequest(COMMON_REQUEST + 't=Batman')
-// MOSTRAR POR PANTALLA EL TITULO, DIRECTOR, ACTORES POR SEPARADO (SPLIT)
 
 // doRequest(COMMON_REQUEST + 's=Star Wars')

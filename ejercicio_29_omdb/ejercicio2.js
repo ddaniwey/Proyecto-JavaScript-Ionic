@@ -27,7 +27,7 @@ function doRequest(url){
   .catch((error) => console.error("Fetch error:", error));
 }
 //console.log(COMMON_URL + 's=Star Wars'); // Comprobamos la url
- doRequest(COMMON_URL + 's=Star Wars');
+// doRequest(COMMON_URL + 's=Star Wars');
 
 
 // EJERCICIO 2
