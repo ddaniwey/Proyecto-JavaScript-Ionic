@@ -6,10 +6,10 @@ botón en rojo y el botón esté desactivado
 */
 
 
-.boton {
+ .activo {
     background-color: green;
 }
 
-.boton {
+.desactivado {
     background-color: red;
 }

@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassList</title>4
+    <title>ClassList</title>
+    <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
-    <button class="boton">Pulsa</button>
+    <button id="boton" class="activo">Pulsa</button>
 </body>
+<script>
+    let boton = document.querySelector('#boton');
+    document.querySelector('#boton').addEventListener('click', () => {
+        if(boton.classList == 'activo'){
+        setTimeout(() => {
+        document.querySelector('#boton').classList.remove('activo');
+        document.querySelector('#boton').classList.add('desactivado');
+    }, 1000);
+} else if(boton.classList == 'desactivado') {
+    setTimeout(() => {
+        document.querySelector('#boton').classList.remove('desactivado');
+        document.querySelector('#boton').classList.add('activo');
+    }, 1000);
+}
+});
+</script>
 </html>
