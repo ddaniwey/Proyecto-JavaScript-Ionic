@@ -1,0 +1,15 @@
+/* Para el selector .activo crea las reglas css que pongan
+el color del botón en verde y el botón esté activo
+
+Para el selector .desactivado crea las reglas css que pongan el color del 
+botón en rojo y el botón esté desactivado 
+*/
+
+
+.boton {
+    background-color: green;
+}
+
+.boton {
+    background-color: red;
+}
