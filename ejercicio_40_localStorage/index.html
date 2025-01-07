@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalStorage</title>
+    <script src="ls_manager.js"></script>
 </head>
 <body>
-    <input type="text" id="input-text">
+    <input type="text" id="input-text" placeholder="Escribe algo...">
     <button id="boton-guardar">Guardar</button>
     <button id="boton-recuperar">Recuperar</button>
 </body>
 </html>
+<script>
+    const KEY_TEXT = 'texto';
+    document.querySelector('#boton-guardar').addEventListener("click" , () => {
+        let valor = document.querySelector('#input-text').value;
+        guardarEnLocalStorage(KEY_TEXT, valor);
+    })
+    document.querySelector('#boton-recuperar').onclick = () =>{
+        console.log('Recuperar');
+        let valor = recuperarDeLocalStorage(KEY_TEXT);
+        document.querySelector('#input-text').value = valor;
+    }
+</script>
