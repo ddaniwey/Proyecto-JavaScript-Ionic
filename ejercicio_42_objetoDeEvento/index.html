@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos de Eventos</title>
+  </head>
+  <body>
+    <div>
+      <img id="imagencita"
+        src="https://imgs.search.brave.com/wpdstARLY8x4hOCRzJFhT4KZYCsTPiuGGwiHyKBmF38/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kcnNj/ZG4uNTAwcHgub3Jn/L3Bob3RvLzEwMDk3/MzAyNjIvbT05MDAv/djI_c2lnPWY1MTdm/YTFhYzNhYTY3ZGUw/ZGYzNjExYjE0OGY5/YmFhOWQ0Yjk5Mjgw/NTc0OWIyMTZkYWUx/ZDg2MzZiY2QzYzQ"
+        width="500px"
+        height="500px"
+        alt="imagen"
+      />
+    </div>
+    <div>
+      <h3 id="x">x</h3>
+      <h3 id="y">y</h3>
+    </div>
+  </body>
+  <script>
+    document.querySelector('#imagencita').addEventListener('mousemove', (e) => {
+        let x = document.querySelector('#x');
+        let y = document.querySelector('#y');
+
+        x.textContent = e.offsetX;
+        y.textContent = e.offsetY;
+    })
+  </script>
+</html>

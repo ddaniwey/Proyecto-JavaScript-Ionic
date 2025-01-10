@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Interval</title>
+    <style>
+      #cronometro {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 200px;
+      }
+      #reloj {
+        position: fixed;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 100px;
+      }
+      #div-gatito {
+        top:0;
+        width: 100%;
+        position: fixed;
+        margin-left: 50%;
+        transition: all 1s;
+      }
+      #div-gatito2 {
+        top: 0;
+        width: 100%;
+        position: fixed;
+        transition: all 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-gatito">
+      <img
+        src="https://i.pinimg.com/originals/d3/e4/13/d3e4136a5c1e95b635dd585f21558026.png"
+        width="7%"
+      />
+      <div id="div-gatito2">
+        <img
+          src="https://i.pinimg.com/originals/d3/e4/13/d3e4136a5c1e95b635dd585f21558026.png"
+          width="7%"
+        />
+        
+    </div>
+    <div>
+      <p width="100%" id="cronometro"></p>
+      <p id="reloj"></p>
+    </div>
+  </body>
+  <script>
+    let minutos = 0;
+    let segundos = 0;
+    let horas = 0;
+    setInterval(() => {
+      segundos++;
+      if (segundos > 59) {
+        segundos = 0;
+        minutos++;
+      }
+      if (minutos > 59) {
+        horas++;
+        minutos = 0;
+      }
+      document.querySelector("#cronometro").innerHTML = `${horas} : ${minutos} : ${segundos}`;
+      let hoy = new Date();
+      let minutosTiempoReal = hoy.getMinutes();
+      let segundosTiempoReal = hoy.getSeconds();
+      let horasTiempoReal = hoy.getHours();
+      document.querySelector(
+        "#reloj"
+      ).innerHTML = `${horasTiempoReal} : ${minutosTiempoReal} : ${segundosTiempoReal}`;
+    }, 1000);
+
+    // Mover el gatito
+    let margenGatito = 1;
+    let gatito = document.querySelector('#div-gatito');
+    let margenWindow = window.innerWidth;
+
+    setInterval(() => {
+        margenGatito+= 10;
+        gatito.style.marginLeft = `${margenGatito}px`
+        let margenWindow = window.innerWidth;
+        if(margenGatito > margenWindow){
+            margenGatito = -3;
+        }
+    }, 100);
+    
+    let margenGatito2 = 1;
+    let gatito2 = document.querySelector('#div-gatito2');
+    let margenWindow2 = window.innerHeight;
+    
+    setInterval(() => {
+        margenGatito2+= 10;
+    margenWindow2 = window.innerHeight;
+    gatito2.style.marginTop = `${margenGatito2}px`
+    console.log(margenWindow2);
+    console.log(margenGatito2);
+        if(margenGatito2 > margenWindow2){
+            margenGatito2 = -3;
+        } 
+    }, 100);
+
+
+
+  </script>
+</html>

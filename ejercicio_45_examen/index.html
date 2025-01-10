@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 id="cronometro"></h3>
+    <div id="div-portada">
+      <button id="comenzar">Comenzar</button>
+    </div>
+    <div id="pregunta1" class="pagina" >
+        <p>¿Qué lenguaje he usado para hacer el juego</p>
+        <input type="radio" name="respuesta" value="1">JavaScript</input><br>
+        <input type="radio" name="respuesta" value="2">PHP</input><br>
+        <input type="radio" name="respuesta" value="3">Python</input><br>
+        <button id="b-siguiente">Siguiente</button>
+    </div>
+    <div id="pregunta2" class="pagina">
+      <p>¿Hay diferencia entre ++1 y 1++?</p>
+      <input type="radio" name="respuesta" value="1">Sí, la hay</input><br>
+        <input type="radio" name="respuesta" value="2">No, no la hay</input><br>
+        <input type="radio" name="respuesta" value="3">La hay pero en otros lenguajes, en JS no.</input><br>
+        <button id="b-siguiente">Siguiente</button>
+      </div>
+    <div id="pregunta3" class="pagina">
+        <p>¿Programando puedes hacer lo que quieras?</p>
+        <input type="radio" name="respuesta" value="1">Si</input><br>
+        <input type="radio" name="respuesta" value="2">No, hay cosas que no se pueden hacer</input><br>
+        <input type="radio" name="respuesta" value="3">Si, con limitaciones</input><br>
+        <button id="b-siguiente">Siguiente</button>
+      </div>
+    <div id="resultado" class="pagina">
+        <p>Resultado FINAL</p>
+    </div>
+    <button value="Siguiente" id="boton-siguiente">Siguiente</button>
+  </body>
+  <script src="script.js"></script>
+</html>

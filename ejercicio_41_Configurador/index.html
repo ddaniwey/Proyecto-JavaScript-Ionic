@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="ls_manager.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <label for="input-color-fondo">Color de fondo</label>
-        <input type="color" id="input-color-fondo">
-        <br>
-        <label for="input-color-letras">Color de las letras</label>
-        <input type="color" id="input-color-letras">
-        <button id="boton-guardar">Guardar preferencias</button>
+      <label for="input-color-fondo">Color de fondo</label>
+      <input type="color" id="input-color-fondo" />
+      <br />
+      <label for="input-color-letras">Color de las letras</label>
+      <input type="color" id="input-color-letras" />
+      <button id="boton-guardar">Guardar preferencias</button>
     </div>
     <div>
-        <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-            officia deserunt mollit anim id est laborum."
-        </p>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum."
+      </p>
     </div>
-</body>
-<script>
+  </body>
+  <script>
+    const colorFondoNuevo = "colorFondoNuevo";
+    const colorLetrasNuevo = "colorLetrasNuevo";
+    
+    document.querySelector("#boton-guardar").addEventListener("click", () => {
+      let colorFondo = document.querySelector("#input-color-fondo").value;
+      guardarEnLocalStorage(colorFondoNuevo, colorFondo);
+      let colorLetras = document.querySelector("#input-color-letras").value;
+      guardarEnLocalStorage(colorLetrasNuevo, colorLetras);
+    });
 
-
-
-    const colorFondoNuevo = 'colorFondoNuevo';
-    const colorLetrasNuevo = 'colorLetrasNuevo';
-    document.querySelector('#boton-guardar').addEventListener('click', () => {
-        let colorFondo = document.querySelector('#input-color-fondo').value;
-        guardarEnLocalStorage(colorFondoNuevo, colorFondo);
-        let colorLetras = document.querySelector('#input-color-letras').value;
-        guardarEnLocalStorage(colorLetrasNuevo, colorLetras);
-    })
-
-        // Al cargar la página tiene que ejecutarse esto siguiente
-        document.querySelector('html').style.backgroundColor = localStorage.getItem(colorFondoNuevo);
-        document.querySelector('html').style.color = localStorage.getItem(colorLetrasNuevo);
-</script>
+    // Al cargar la página tiene que ejecutarse esto siguiente
+    document.querySelector("html").style.backgroundColor =
+      localStorage.getItem(colorFondoNuevo);
+    document.querySelector("html").style.color =
+      localStorage.getItem(colorLetrasNuevo);
+  </script>
 </html>

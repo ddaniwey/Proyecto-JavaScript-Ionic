@@ -1,0 +1,9 @@
+Aplicación SPA(Single Page Application)
+
+Construir un test con 3 preguntas, cada una de ellas con 3 respuestas
+
+Al cargar la página aparece la primera pregunta. 
+Dispones de 5 segundos para responder y pulsar el botón de siguiente .
+Si respondes y pulsas siguiente, aparece la siguiente pregunta.
+Se tiene que mostrar el tiempo transcurrido desde el inicio de la pregunta.
+Al final se muestra el resultado del examen.

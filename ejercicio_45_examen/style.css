@@ -1,0 +1,32 @@
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+#pregunta1 , #pregunta2 , #pregunta3 , #boton-siguiente, #resultado{
+    display: none;
+    align-self: center;
+}
+
+h3 {
+    color:blue;
+}
+#div-portada {
+    width: 100%;
+    height: 20em;
+    transition: all 1s;
+    background-color: crimson;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#comenzar {
+    align-self: center;
+    text-align: center;
+    position: fixed;
+}
