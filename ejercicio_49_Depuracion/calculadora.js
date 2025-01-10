@@ -1,4 +1,3 @@
-
 document.querySelector('#b-enviar').addEventListener('click', () => {
     let numero1 = parseInt(document.querySelector('#numero1').value);
     let numero2 = parseInt(document.querySelector('#numero2').value);
