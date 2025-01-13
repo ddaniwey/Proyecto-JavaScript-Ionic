@@ -1,0 +1,20 @@
+/*Crear la clase Vehículo:
+- Debe tener los atributos: nombre, color
+- Debe tener el método: arrancar (muestra "Estoy arrancando");
+
+Crear la clase Automovil que herede de vehiculo:
+- Debe tener los atributos: marca, modelo
+- Debe tener el método arrancar (muestra "Soy un automóvil y estoy arrancando");
+
+Crear la clase Barco que herede de Vehículo:
+- Debe tener los atributos: eslora, manga
+- Debe tener el método arrancar (muestra "Soy un barco y estoy arrancando");
+
+Crear una instancia de Automovil y otra de Barco.
+Arrancar ambos.
+Preguntar si automovil es una instancia de Vehículo
+Preguntar si automovil es una instancia de Automovil
+Preguntar si el barco es una instancia de Vehículo
+Preguntar si el automovil es una instancia de Barco
+
+*/
